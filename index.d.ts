@@ -38,7 +38,7 @@ declare module 'react-native-phone-input' {
     countriesList: Array<Country>
   }
   
-  export default class PhoneInput extends React.Component {
+  export default class PhoneInput extends React.Component<Props, any> {
     focus(): void
     blur(): void
     format(t: string): string
