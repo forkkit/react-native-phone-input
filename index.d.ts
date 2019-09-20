@@ -12,6 +12,14 @@ declare module 'react-native-phone-input' {
     areaCodes: string[],
   }
   
+  export type State = {
+    iso2: string
+    disabled: boolean
+    formattedNumber: string
+    value: any
+    inputValue: string
+  }
+  
   export interface Props extends React.Props<any> {
     flagComponent: PropTypes.func,
     textComponent: PropTypes.func,
@@ -38,16 +46,17 @@ declare module 'react-native-phone-input' {
     countriesList: Array<Country>
   }
   
-  export default class PhoneInput extends React.Component<Props, any> {
+  export default class PhoneInput extends React.Component<Props, State> {
     focus(): void
     blur(): void
     format(t: string): string
     isValidNumber(): boolean
-    selectCountry(ios2: any)
+    selectCountry(ios2: string)
     getNumberType(): any
     getValue(): any
     getDialCode(): string
-    getFlag(iso2: any): any
+    getISOCode(): string
+    getFlag(iso2: string): any
     getAllCountries(): Country[]
     getCountryCode(): string
     getPickerData(): any
