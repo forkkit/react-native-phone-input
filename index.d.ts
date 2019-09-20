@@ -37,4 +37,21 @@ declare module 'react-native-phone-input' {
     allowZeroAfterCountryCode: PropTypes.bool
     countriesList: Array<Country>
   }
+  
+  export default class PhoneInput extends React.Component {
+    focus(): void
+    blur(): void
+    format(t: string): string
+    isValidNumber(): boolean
+    selectCountry(ios2: any)
+    getNumberType(): any
+    getValue(): any
+    getDialCode(): string
+    getFlag(iso2: any): any
+    getAllCountries(): Country[]
+    getCountryCode(): string
+    getPickerData(): any
+    onPressFlag(): any
+    onChangePhoneNumber(n: number)
+  }
 }
