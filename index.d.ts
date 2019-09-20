@@ -1,5 +1,5 @@
-import React from 'react'
-import {PropTypes} from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 declare module 'react-native-phone-input' {
   export type StyleType = PropTypes.object | PropTypes.number
