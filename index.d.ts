@@ -49,6 +49,7 @@ declare module 'react-native-phone-input' {
     style?: StyleType,
     flagStyle?: StyleType,
     textStyle?: StyleType,
+    textContainerStyle?: StyleType,
     offset?: PropTypes.number,
     textMaxLength?: PropTypes.number,
     textProps?: PropTypes.object,
