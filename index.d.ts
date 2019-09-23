@@ -20,6 +20,8 @@ declare module 'react-native-phone-input' {
     inputValue: string
   }
   
+  export function getFlag(iso: string): any
+  
   export interface Props extends React.Props<any> {
     flagComponent?: PropTypes.func,
     textComponent?: PropTypes.func,
