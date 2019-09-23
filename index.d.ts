@@ -43,6 +43,7 @@ declare module 'react-native-phone-input' {
     initialCountry?: PropTypes.string,
     onChangePhoneNumber?: PropTypes.func,
     onTextFocus?: PropTypes.func,
+    onEndEditing?: PropTypes.func,
     onFlagChange?: PropTypes.func,
     value?: PropTypes.string,
     style?: StyleType,
@@ -79,6 +80,7 @@ declare module 'react-native-phone-input' {
     public static getCountryByISO(iso: string): Country
     public static getCountryDialCodeByISO(iso: string): string
     public static isValidNumber(number:string, iso: string): boolean
+    public static formatNumber(number:string, iso: string): string
   
     focus(): void
     blur(): void
