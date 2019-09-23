@@ -25,6 +25,7 @@ declare module 'react-native-phone-input' {
     textComponent?: PropTypes.func,
     initialCountry?: PropTypes.string,
     onChangePhoneNumber?: PropTypes.func,
+    onFlagChange?: PropTypes.func,
     value?: PropTypes.string,
     style?: StyleType,
     flagStyle?: StyleType,
