@@ -82,6 +82,7 @@ declare module 'react-native-phone-input' {
     public static getCountryDialCodeByISO(iso: string): string
     public static isValidNumber(number:string, iso: string): boolean
     public static formatNumber(number:string, iso: string): string
+    public static getCountryISOFromNumber(number): string
   
     focus(): void
     blur(): void
