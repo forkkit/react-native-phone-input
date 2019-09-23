@@ -20,18 +20,36 @@ declare module 'react-native-phone-input' {
     inputValue: string
   }
   
+  export type CountryPickerState = {
+    bottomColor: string
+    modalVisible: boolean
+    selectedCountry: string
+  }
+  
+  export interface CountryPickerProps {
+    buttonColor: PropTypes.string,
+    labels: PropTypes.array,
+    confirmText: PropTypes.string,
+    cancelText: PropTypes.string,
+    itemStyle: PropTypes.object,
+    onSubmit: PropTypes.func,
+    onPressCancel: PropTypes.func,
+    onPressConfirm: PropTypes.func,
+  }
   
   export interface Props extends React.Props<any> {
     flagComponent?: PropTypes.func,
     textComponent?: PropTypes.func,
     initialCountry?: PropTypes.string,
     onChangePhoneNumber?: PropTypes.func,
+    onTextFocus?: PropTypes.func,
     onFlagChange?: PropTypes.func,
     value?: PropTypes.string,
     style?: StyleType,
     flagStyle?: StyleType,
     textStyle?: StyleType,
     offset?: PropTypes.number,
+    textMaxLength?: PropTypes.number,
     textProps?: PropTypes.object,
     onSelectCountry?: PropTypes.func,
     onPressCancel?: PropTypes.func,
@@ -46,6 +64,14 @@ declare module 'react-native-phone-input' {
     disabled?: PropTypes.bool,
     allowZeroAfterCountryCode?: PropTypes.bool
     countriesList?: Array<Country>
+  }
+  
+  export class CountryPicker extends React.Component<CountryPickerProps, CountryPickerState> {
+    selectCountry(s: string): void
+    onPressCancel(): void
+    onPressSubmit(): void
+    onValueChange(s: string): void
+    show(): void
   }
   
   export default class PhoneInput extends React.Component<Props, State> {
