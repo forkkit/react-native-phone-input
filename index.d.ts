@@ -54,6 +54,7 @@ declare module 'react-native-phone-input' {
     textMaxLength?: PropTypes.number,
     textProps?: PropTypes.object,
     onSelectCountry?: PropTypes.func,
+    onFlagPressed?: PropTypes.func,
     onPressCancel?: PropTypes.func,
     onPressConfirm?: PropTypes.func,
     pickerButtonColor?: PropTypes.string,
